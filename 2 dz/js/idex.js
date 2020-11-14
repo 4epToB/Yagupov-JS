@@ -1,4 +1,4 @@
-/*
+
 var monthNum=parseInt(prompt('Введите номер месяца', '1-12'));
 if(monthNum==1 || monthNum==2 || monthNum==3 ){
     alert('Это зима')
@@ -43,7 +43,7 @@ if(chislo<0 && chislo>-100){
 }else if (chislo>0 && chislo<10){
     alert('Положительное однозначное число')
 }
-*/
+
 var massive=1
 do{ 
     if (massive%5==0 && massive%3==0){console.log('ThreeFive')} 
