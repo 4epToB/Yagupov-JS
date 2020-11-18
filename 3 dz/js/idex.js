@@ -66,16 +66,26 @@ console.log(count)
 
 
 
-let weightsOriginal=[6, 4, 2, 8, 1, 1]
+let weightsOriginal=[2, 7, 4, 1, 8, 1]
 console.log(weightsOriginal)
 let weights=weightsOriginal.slice()
-weights.sort(function(a, b) {
-    return b - a;
-  })
-console.log(weights)
-/*for (q=weightsOriginal.length;q>=1;q--){
-    for (e=0;e<=weights.length-1;e+2){*/
-    weightsOriginal.splice(weightsOriginal.indexOf(weights[1]),1);
-    console.log(weightsOriginal)
-    weightsOriginal.splice(weightsOriginal.indexOf(weights[1+1],1,(weights[1]-weights[1+1])));
-    console.log(weightsOriginal)
+while (weights.length>=1){
+    if (weights.length == 2 && weights[0]==weights[1]) {
+            console.log("0. Молекул не осталось")
+            break;
+        }
+    if (weights.length == 1) {
+        console.log("Вес последней молекулы", weights[0])
+        break;
+        }
+    weights.sort(function(a, b) {
+        return b - a;
+    })
+    console.log("q=",weights.length, weights)
+    if (weights[0]==weights[1]){weights.splice(0,2)
+    }else{
+        weights[1]=weights[0]-weights[1]
+        weights.splice(0,1)
+    }
+    console.log(weights)
+}--weights.length
