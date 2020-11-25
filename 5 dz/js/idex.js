@@ -10,19 +10,17 @@ console.log(compare(mas1,mas2))
 function range(start,end,step=1){
     let output=[]
     output[0] = start 
-    for (i = 1;; i++){
+    for (i = 1;output[i-1]+step<=end; i++){
         if(step>=end){
             break;
             }
         output[i]=output[i-1]+step
-        if(output[i]+step>end){
-            break;
-            }
     }
     return output
 }
 console.log(range(2,12,3))
 console.log(range(8,10,2))
+console.log(range(5,6,2))
 
 
 let student={
